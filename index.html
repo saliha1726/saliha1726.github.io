@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saliha Alekar | Portfolio</title>
+
+<style>
+:root {
+    --bg:#0f172a;
+    --text:#e2e8f0;
+    --card:#1e293b;
+}
+.light {
+    --bg:#f4f6f9;
+    --text:#111;
+    --card:#fff;
+}
+body {
+    margin:0;
+    font-family:Segoe UI;
+    background:var(--bg);
+    color:var(--text);
+}
+
+/* NAV */
+nav {
+    display:flex;
+    justify-content:space-between;
+    padding:15px 40px;
+    background:var(--card);
+    position:sticky;
+    top:0;
+}
+nav a {
+    color:var(--text);
+    margin-left:15px;
+    text-decoration:none;
+}
+
+/* HERO */
+.hero {
+    padding:60px 40px;
+}
+.hero span { color:#38bdf8; }
+
+/* SECTION */
+.section {
+    padding:40px;
+}
+h2 { color:#38bdf8; }
+
+/* CARD */
+.card {
+    background:var(--card);
+    padding:15px;
+    border-radius:10px;
+    margin-top:10px;
+}
+
+/* GRID */
+.grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+/* IMAGE */
+.card img {
+    width:100%;
+    border-radius:10px;
+}
+
+/* SKILLS */
+.skill {
+    display:inline-block;
+    background:var(--card);
+    padding:8px 15px;
+    margin:5px;
+    border-radius:20px;
+}
+
+/* FORM */
+input, textarea {
+    width:100%;
+    padding:10px;
+    margin:5px 0;
+}
+
+/* BUTTON */
+.btn {
+    background:#38bdf8;
+    padding:10px 20px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+/* TOGGLE */
+.toggle {
+    cursor:pointer;
+    background:#38bdf8;
+    padding:5px 10px;
+    border-radius:5px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h3>Saliha</h3>
+    <div>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+        <span class="toggle" onclick="toggleMode()">🌙</span>
+    </div>
+</nav>
+
+<div class="hero">
+    <h1>Hi, I'm <span>Saliha Alekar</span></h1>
+    <p>IT Student | Web Developer | Problem Solver</p>
+</div>
+
+<!-- ABOUT -->
+<div class="section" id="about">
+<h2>Professional Summary</h2>
+<div class="card">
+Detail-oriented IT postgraduate student with strong foundation in Computer Science,
+web development, and data management. Skilled in problem-solving and building efficient solutions.
+</div>
+</div>
+
+<!-- PROJECTS -->
+<div class="section" id="projects">
+<h2>Projects Dashboard</h2>
+<div class="grid">
+
+<div class="card">
+<img src="project1.png">
+<h3>RR Billing System</h3>
+<p>GST billing with invoice, PDF export, and history tracking.</p>
+</div>
+
+<div class="card">
+<img src="project2.png">
+<h3>School Management System</h3>
+<p>Student record system using SQL database.</p>
+</div>
+
+</div>
+</div>
+
+<!-- SKILLS -->
+<div class="section" id="skills">
+<h2>Technical Skills</h2>
+<span class="skill">Python</span>
+<span class="skill">SQL</span>
+<span class="skill">HTML</span>
+<span class="skill">CSS</span>
+<span class="skill">JavaScript</span>
+<span class="skill">GitHub</span>
+<span class="skill">MS Excel</span>
+</div>
+
+<!-- FULL CV -->
+<div class="section" id="cv">
+<h2>Full CV</h2>
+
+<div class="card">
+<h3>Education</h3>
+<p>MSc IT – University of Mumbai (2025–2027)</p>
+<p>BSc Computer Science – University of Mumbai (2022–2025)</p>
+<p>HSC – Maharashtra Board (2021)</p>
+<p>SSC – Maharashtra Board (2020)</p>
+</div>
+
+<div class="card">
+<h3>Projects Details</h3>
+<ul>
+<li>RR Billing System – GST billing, invoice, PDF export</li>
+<li>School Management System – Student database system</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Academic Experience</h3>
+<ul>
+<li>Data analysis using MS Excel</li>
+<li>SQL queries and database handling</li>
+<li>Cloud computing concepts</li>
+<li>Cyber security basics</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Certifications</h3>
+<ul>
+<li>Data Entry Certification</li>
+<li>MS Excel Certification</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Strengths</h3>
+<ul>
+<li>Problem solving</li>
+<li>Quick learner</li>
+<li>Teamwork</li>
+<li>Attention to detail</li>
+</ul>
+</div>
+
+</div>
+
+<!-- CONTACT -->
+<div class="section" id="contact">
+<h2>Contact Me</h2>
+
+<form action="https://formspree.io/f/xxxxabcd" method="POST">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<textarea name="message" placeholder="Your Message" required></textarea>
+<button type="submit" class="btn">Send Message</button>
+</form>
+
+<p>Email: salihaatiq367@gmail.com</p>
+<p>Phone: 8956951726</p>
+
+</div>
+
+<script>
+function toggleMode(){
+document.body.classList.toggle("light");
+}
+</script>
+
+</body>
+</html>
